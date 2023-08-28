@@ -34,7 +34,7 @@ app.post("/api/notes", (req, res) => {
     if (error) {
       return console.log(error);
     }
-    notes = JSON.parse(data);
+    let notes = JSON.parse(data);
     //assign unique id to each new note depending on last id.
     //if no items in notes array, assign id to 1
     if (notes.length > 0) {
